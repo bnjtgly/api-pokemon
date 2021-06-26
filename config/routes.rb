@@ -17,5 +17,3 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
-
-# eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyNGE5NGZhNy0zMGYwLTRmZTgtODYzZi0xNzBjMGVkNWYwNmYiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjI0NjMyMTk5LCJleHAiOjE2MjQ2MzM5OTl9.cvLrACQee_2TUmUX08nP4F-LLlB4TBWvzOotyFIkjeA

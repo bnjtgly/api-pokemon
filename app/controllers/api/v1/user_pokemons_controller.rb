@@ -2,8 +2,6 @@ class Api::V1::UserPokemonsController < ApplicationController
     before_action :authenticate_user!
     before_action :find_pokemon, only: %i[show update destroy]
 
-    # params1 = { info: { pokedex_id: 252, nick_name: 'Try', favorite_color: 'Browsn', favorite_food: 'Insects', pokemon_attributes: { name: 'Treecko' } } }
-
     def index
         @my_pokemons = UserPokemon.where(user_id: current_user)
         render json: @my_pokemons, status: :ok
@@ -38,7 +36,6 @@ class Api::V1::UserPokemonsController < ApplicationController
     def destroy
         my_pokemon = UserPokemon(@my_pokemon.id)
         render json: my_pokemon
-        # @user.destroy
     end
 
     private
