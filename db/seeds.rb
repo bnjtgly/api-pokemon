@@ -22,3 +22,10 @@ Info.create(nick_name: 'Bly', pokemon_id: pokemon5.id, pokedex_id: 9)
 
 pokemon6 = Pokemon.create(name: "Slowking")
 Info.create(nick_name: 'Sly', pokemon_id: pokemon6.id, pokedex_id: 199)
+
+
+# params1 = { info: { pokedex_id: 252, nick_name: 'Try', favorite_color: 'Browsn', favorite_food: 'Insects', pokemon_attributes: { name: 'Treecko' } } }
+
+# params2 = { info: { pokedex_id: 255, nick_name: 'Tuy', favorite_color: 'Browsn', favorite_food: 'Worms', pokemon_attributes: { name: 'Torchic' } } }
+
+# params3 = { info: { pokedex_id: 258, nick_name: 'Muy', favorite_color: 'Browsn', favorite_food: 'Shrimps', pokemon_attributes: { name: 'Mudkip' } } }

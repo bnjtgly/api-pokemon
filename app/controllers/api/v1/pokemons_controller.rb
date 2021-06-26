@@ -1,14 +1,14 @@
 class Api::V1::PokemonsController < ApplicationController
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
     require 'poke-api-v2'
 
     def index
         @pokemon = Pokemon.limit(6)
-        render :json => @pokemon.to_json(include: { info: { except: [:id, :created_at, :updated_at, :pokemon_id]} })
+        render :json => @pokemon.to_json(include: { info: { except: [:id, :created_at, :updated_at, :pokemon_id]} }), status: :ok
     end
 
     def show
-        pokemon = PokeApi.get(pokemon: params[:id]);
+        pokemon = PokeApi.get(pokemon: params[:id].downcase);
         @pokemon = [{
             id: pokemon.id,
             name: pokemon.name,
@@ -16,7 +16,7 @@ class Api::V1::PokemonsController < ApplicationController
             types: get_types(pokemon.types),
             moves: get_moves(pokemon.moves)
         }]
-        render json: @pokemon
+        render json: @pokemon, status: :ok
     end
 
     private

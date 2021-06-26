@@ -1,6 +1,11 @@
 class CurrentUserController < ApplicationController
   before_action :authenticate_user!
   def index
-    render json: current_user, status: :ok
+    user = QueryStatement.new({
+      query_statement: "SELECT * FROM user_pokemons WHERE user_id=#{current_user.id}"
+    }).execute
+    render json: user, status: :ok
   end
 end
+
+
