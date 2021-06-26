@@ -3,8 +3,8 @@ class Api::V1::UserPokemonsController < ApplicationController
     before_action :find_pokemon, only: %i[show update destroy]
 
     def index
-        @my_pokemons = UserPokemon.where(user_id: current_user)
-        render json: @my_pokemons, status: :ok
+        @my_pokemons_info = Pokemon.joins(:user_pokemon).where("user_pokemons.user_id = #{current_user.id}")
+        render :json => @my_pokemons_info.to_json(include: { info: { except: [:id, :created_at, :updated_at, :pokemon_id]} }), status: :ok
     end
     
     def show
