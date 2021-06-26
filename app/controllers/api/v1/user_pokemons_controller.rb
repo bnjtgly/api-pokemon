@@ -45,6 +45,6 @@ class Api::V1::UserPokemonsController < ApplicationController
         render json: { errors: 'Pokemon not found' }, status: :not_found
     end
     def my_pokemon_params
-        params.require(:user_pokemon).permit(info: [:pokedex_id, :nick_name, pokemon_attributes: [:name]])
+        params.require(:user_pokemon).permit(info: [:pokedex_id, :nick_name, :moveset, pokemon_attributes: [:name]])
     end
 end
