@@ -13,7 +13,7 @@ Steps
 3. git clone https://github.com/bnjtgly/api-pokemon.git
 4. cd api-pokemon
 5. bundle install
-6. Delete /config/master.key and /config/credentials.yml.enc
+6. Delete the two files in app/config/master.key and app/config/credentials.yml.enc
 7. run and save  EDITOR="nano" rails credentials:edit
 8. rails db:create 
 9. rails db:migrate
