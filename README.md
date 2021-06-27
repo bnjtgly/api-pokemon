@@ -4,7 +4,7 @@
 
 API
 Note: 
-1. Run in ubutu/linux
+1. Run on ubutu/linux
 2. Use postgresql and run rails in port 3000(url should look like http://localhost:3000/) - This is important to run successfully the frontend.
 
 Steps
