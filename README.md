@@ -1,25 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # api-pokemon
+
+API
+Note: 
+1. Run in ubutu/linux
+2. Use postgresql and run rails in port 3000(url should look like http://localhost:3000/) - This is important to run successfully the frontend.
+
+Steps
+1. Create a folder. (Ex. test)
+2. cd test
+3. git clone https://github.com/bnjtgly/api-pokemon.git
+4. cd api-pokemon
+5. bundle install
+6. Delete /config/master.key and /config/credentials.yml.enc
+7. run and save  EDITOR="nano" rails credentials:edit
+8. rails db:create 
+9. rails db:migrate
+10. rails s
+
