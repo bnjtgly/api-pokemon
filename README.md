@@ -19,3 +19,11 @@ Steps
 9. rails db:migrate
 10. rails s
 
+
+My pokemons endpoints
+get api/v1/user_pokemons #index
+get api/v1/user_pokemons/1 #show
+post  api/v1/user_pokemons #create
+put api/v1/user_pokemons/1 #update
+delete api/v1/user_pokemons/1 #destroy
+
