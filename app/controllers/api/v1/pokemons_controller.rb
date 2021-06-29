@@ -1,5 +1,4 @@
 class Api::V1::PokemonsController < ApplicationController
-    # before_action :authenticate_user!
     require 'poke-api-v2'
 
     def index

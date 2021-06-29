@@ -24,10 +24,7 @@ class Api::V1::UserPokemonsController < ApplicationController
     end
 
     def update
-        # pokemon_id = UserPokemon.find(params[:id])
-        # my_pokemon = Info.where(pokemon_id: pokemon_id.pokemon_id)
         my_pokemon = Info.where(pokemon_id: params[:id])
-        # pokemon_info = Info.select("pokemons.name, infos.*").joins(:pokemon).where(pokemon_id: pokemon_id.pokemon_id)
         pokemon_info = Info.select("pokemons.name, infos.*").joins(:pokemon).where(pokemon_id: params[:id])
         if my_pokemon.update(my_pokemon_params[:info])
             render json: {message: 'Success'}, status: :ok
@@ -44,10 +41,7 @@ class Api::V1::UserPokemonsController < ApplicationController
 
     private
     def find_pokemon
-        # poke_id = UserPokemon.where(pokemon_id: params[:id])
-        # @my_pokemon = poke_id
         @my_pokemon = Pokemon.find(params[:id])
-        # @my_pokemon = Pokemon.find(poke_id.first.id)
         rescue ActiveRecord::RecordNotFound
         render json: { errors: 'Pokemon not found' }, status: :not_found
     end
