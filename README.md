@@ -1,25 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # api-pokemon
+
+API
+Note: 
+1. Run on ubuntu/linux.
+2. ruby 3.0.1, Rails 6.1.4
+3. Use postgresql and run rails in port 3000(url should look like http://localhost:3000/) - This is important to run successfully the frontend.
+
+Steps
+1. Create a folder. (Ex. test).
+2. cd test
+3. git clone https://github.com/bnjtgly/api-pokemon.git
+4. cd api-pokemon
+5. bundle install
+6. Delete the two files app/config/master.key and app/config/credentials.yml.enc
+7. run and save EDITOR="nano" rails credentials:edit
+8. rails db:create 
+9. rails db:migrate
+10. rails s
+
+
+
+My pokemons endpoints
+
+
+get api/v1/user_pokemons #index
+
+get api/v1/user_pokemons/1 #show
+
+post  api/v1/user_pokemons #create
+
+put api/v1/user_pokemons/1 #update
+
+delete api/v1/user_pokemons/1 #destroy
+
